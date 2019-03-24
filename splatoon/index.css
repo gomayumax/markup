@@ -1,0 +1,323 @@
+html {
+    height: 100%;
+    font-size: 20px;
+    color: #eee;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #a74;
+}
+
+h2 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timer {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.container > .left{
+    height: 100%;
+    width: 40%;
+    padding: 10px 15px 0 0;
+}
+
+.container > .left > .left-inner{
+    padding: 10px 15px 0 0;
+}
+
+.container > .right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(38, 12, 11, 0.5);
+}
+
+.right > div {
+    width: 70%;
+}
+
+.left > div {
+    margin: 10px 70px 10px 0;
+}
+
+.status {
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.status > div {
+    margin: 2px;
+    background-color: #444;
+    border:solid 0.5px #444;
+    border-radius: 4em;
+}
+
+.status > .item {
+    line-height: 2em;
+    display: flex;
+    justify-content: left;
+    padding: 0 15px;
+}
+
+.status > .item > div {
+    display: flex;
+}
+
+.status > .item > .sazae {
+    margin-right: 15px;
+}
+.status > .item > * > i {
+    margin: auto 5px auto 0;
+    display: block;
+}
+
+.status > .item > * > i > span {
+    display: none;
+}
+
+.status > .item > .sazae > i {
+    width: 33px;
+    height: 33px;
+    background-image: url("./sazae.png");
+}
+
+.status > .item > .coin > i {
+    width: 32px;
+    height: 32px;
+    background-image: url("./coin.png");
+}
+
+.status > .rank {
+    width: 365px;
+    line-height: 38px;
+    display: flex;
+    padding: 0 18px;
+}
+
+.status > .rank > .title {
+    width: 75px;
+}
+
+.status > .rank > .title {
+    color: #3f3;
+}
+
+.status > .rank > .amount, .status > .udemae > .amount > .level {
+    width: 55px;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.status > .rank > .keikenti {
+    width: 220px;
+    position:relative;
+    margin: 4px 0;
+}
+.status > .rank > .keikenti > .banner {
+    background-color: #332;
+    height: 30px;
+    display: block;
+}
+
+.status > .rank > .keikenti > .amount {
+    line-height: 20px;
+    font-size: 15px;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.status > .rank > .keikenti > .banner > .mater {
+    background-color: #8f2;
+    width: 45%;
+    height: 100%;
+}
+
+.status > .udemae {
+    width: 365px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px;
+}
+
+.status > .udemae > .amount {
+    display: flex;
+}
+
+.status > .udemae > .amount > .title {
+    color: #e52;
+    font-size: medium;
+    width: 75px;
+    line-height: 30px;
+}
+.status > .udemae > .amount > .coron {
+    width: 12px;
+}
+
+.status > .udemae > .banner {
+    background-color: #bbbbbb;
+    height: 30px;
+    width: 350px;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+}
+
+.status > .udemae > .banner > .line{
+    background-color: #57b11e;
+    height: 25px;
+    width: 2px;
+    position: absolute;
+    left: 36%;
+}
+
+.left > .rule {
+    background-color: #444;
+    border:solid 0.5px #444;
+    border-radius: 2em;
+    padding: 20px;
+    width: 400px;
+    margin-top: 40px;
+    transform:rotate(-2.5deg);
+}
+
+.left > .rule > *  > h2 {
+    border-bottom: dotted #bbbbbb;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.left > .rule > .rule-box > .name {
+    color: #ee5522;
+    font-size: 30px;
+}
+
+.left > .rule > .stage-box {
+    margin-top: 20px;
+}
+.left > .rule > .stage-box > ul > li{
+    display: flex;
+    margin: 5px 0;
+}
+
+.left > .rule > .stage-box > ul > li > img {
+    margin-right: 5px;
+}
+
+.left > .rule > .stage-box > ul > li > .name {
+    margin: auto 0;
+}
+
+
+.member {
+    padding-top: 25px;
+}
+.member > .message {
+    text-align: center;
+    border-bottom: dotted #bbb;
+    font-size: x-large;
+    color: #eee;
+}
+.member > ul {
+    padding: 0 10px;
+}
+.member > ul > li {
+    border-radius: 2em;
+    margin: 9px 10px;
+    display: block;
+    transform:rotate(-0.3deg);
+}
+
+.member > ul > .fix {
+    background-color: #f62;
+    border:solid 0.5px #f62;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.member > ul > .waiting {
+    background-color: #444;
+    border:solid 0.5px #444;
+    text-align: center;
+    line-height: 50px;
+}
+
+.member > ul > .me {
+    position: relative;
+}
+
+.member > ul > .me::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url("./yazirusi.png");
+    left: -50px;
+}
+
+.member > ul > .fix > .rank {
+    float: left;
+    width: 45px;
+    margin: 6px 0;
+}
+
+.member > ul > .fix > .rank > .label{
+    font-size: x-small;
+}
+
+.member > ul > .fix > .rank > .amount{
+    line-height: 1em;
+}
+
+.member > ul > .fix > .name {
+    float: left;
+    line-height: 50px;
+    margin-left: 15px;
+}
+
+.member > ul > .fix > .udemae {
+    float: right;
+    width: 85px;
+    display: block;
+    background-color: #510;
+    border:solid 0.5px #510;
+    border-radius: 4em;
+    text-align: center;
+    line-height: 42px;
+    margin: 3px 0;
+}
+
+.member > ul > .fix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
