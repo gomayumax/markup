@@ -28,15 +28,14 @@ ul {
 .container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 1366px;
     height: 100%;
-    margin-left: 10%;
 }
 
 .container > .left{
     height: 100%;
     width: 40%;
-    padding: 10px 15px 0 0;
+    padding: 10px 15px 0 10%;
 }
 
 .container > .left > .left-inner{
@@ -252,7 +251,12 @@ ul {
     transform:rotate(-0.3deg);
 }
 
+.member > ul > li > :last-child {
+    margin-left: auto;
+}
+
 .member > ul > .fix {
+    display: flex;
     background-color: #f62;
     border:solid 0.5px #f62;
     height: 50px;
@@ -283,7 +287,6 @@ ul {
 }
 
 .member > ul > .fix > .rank {
-    float: left;
     width: 45px;
     margin: 6px 0;
 }
@@ -297,21 +300,20 @@ ul {
 }
 
 .member > ul > .fix > .name {
-    float: left;
     line-height: 50px;
     margin-left: 15px;
 }
 
 .member > ul > .fix > .udemae {
-    float: right;
     width: 85px;
+    height: 45px;
     display: block;
     background-color: #510;
     border:solid 0.5px #510;
     border-radius: 4em;
     text-align: center;
     line-height: 42px;
-    margin: 3px 0;
+    margin-top: 1px;
 }
 
 .member > ul > .fix::after {
