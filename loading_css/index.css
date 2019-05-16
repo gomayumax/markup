@@ -1,0 +1,83 @@
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.dot {
+    border: dotted 10px #bbb;
+}
+
+.gradation {
+    background-image: linear-gradient(90deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(90deg, #69d2e7, #a7dbd8, #e0e4cc, #f38630, #fa6900);
+    background-size: 10px 3px, 100% 3px;
+}
+
+.rolling_animation {
+    animation-name: rolling;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes rolling {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.squire {
+    width: 50px;
+    height: 50px;
+    background-color: #ee8252;
+}
+
+.change-color {
+    animation-name: change-color;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: #eee55e;
+        border-radius: 50% 43% 40% 46%;
+        transform: rotate(0);
+        width: 60px;
+        height: 80px;
+    }
+
+    25% {
+        background-color: #ee88ad;
+    }
+
+    50% {
+        background-color: #ee403d;
+        border-radius: 40% 70% 45% 60%;
+        width: 70px;
+        height: 70px;
+    }
+
+    75% {
+        background-color: #eee55e;
+    }
+
+    100% {
+        background-color: #ee88ad;
+        border-radius: 90% 50% 80% 70%;
+        transform: rotate(270deg);
+        width: 90px;
+        height: 90px;
+    }
+}
