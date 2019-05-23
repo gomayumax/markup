@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #aaa;
+}
+
+.shutter {
+    background: repeating-linear-gradient(rgba(89, 84, 83, 0.52) 0, rgba(89, 84, 83, 0.5) 30px, rgba(24, 20, 19, 0.76) 30px, rgba(24, 20, 19, 0.5) 40px);
+}
+.center {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -350px;
+    bottom: 0px;
+    margin: auto;
+    width: 373px;
+    height: 400px;
+}
+.kanban{
+    transform: rotate(15deg);
+    animation: shake ease-in-out 4s infinite normal;
+}
+.himo {
+    width: 250px;
+    height: 250px;
+    border-top: 5px solid #333;
+    border-right: 5px solid #333;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 350px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.board {
+    position: absolute;
+    width: 373px;
+    height: 200px;
+    background-color: #ddd;
+    top: 350px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.board > p {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ee403d;
+    line-height: 200px;
+    text-align: center;
+}
+
+@keyframes shake {
+    50%{
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+    
+}

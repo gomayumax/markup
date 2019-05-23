@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>garagara</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="garagara.css">
+</head>
+<body>
+<div id ="app">
+  <transition name="upper">
+    <div v-if="loading" class="loading-screen shutter">
+      <div class="center kanban">
+        <div class="himo"></div>
+        <div class="board">
+          <p>準備中</p>
+        </div>
+      </div>
+    </div>
+
+  </transition>
+</div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      show: true,
+      loading: true,
+    },
+    created: function () {
+      this.sleep().then(res => {
+        this.loading = false
+      })
+    },
+    methods: {
+      sleep: function () {
+        return new Promise(resolve => setTimeout(resolve, 3000));
+      }
+    },
+  })
+</script>
+
+<style scoped>
+  .upper-enter-active {
+    animation: upper-in 5s;
+  }
+  .upper-leave-active {
+    animation: upper-in 5s reverse;
+  }
+  @keyframes upper-in {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100vh;
+    }
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+  <div class="loading-screen" v-show="loading">
+    <div class="center">
+      <div v-show="circle">
+        <div class="squire change-color m-a"></div>
+        <p class="loading-text">now loading...</p>
+      </div>
+      <div class="wrap" v-show="bar">
+        <div class="bar"></div>
+        <p>now loading...</p>
+      </div>
+    </div>
+  </div>
+  <div v-show="!loading">
+    <img src="https://pbs.twimg.com/profile_images/971311017555890177/mwP27ZmR.jpg">
+  </div>
+</div>
+
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+      results: [],
+      loading: true,
+      circle: false,
+      bar: true,
+    },
+    created: function () {
+      this.sleep().then(res => {
+          this.loading = false
+      })
+    },
+    methods: {
+      sleep: function () {
+          return new Promise(resolve => setTimeout(resolve, 10000));
+      }
+    },
+  });
+</script>
+
+</body>
+</html>

@@ -81,3 +81,142 @@
         height: 90px;
     }
 }
+
+.loading {
+    display: inline-block;
+    margin: 5em;
+    border-width: 30px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.style-1 {
+    border-style: solid;
+    border-color: #444 transparent;
+}
+
+.style-2 {
+    border-style: double;
+    border-color: #444 transparent;
+}
+
+.style-3 {
+    border-style: double;
+    border-color: #444 #fff #fff;
+}
+
+@keyframes spin {
+    100% {  transform: rotate(359deg); }
+}
+
+.circle-3 {
+    border-style: solid;
+    border-color: #444 transparent #444 #444;
+    border-width: 30px;
+    border-radius: 50%;
+}
+
+.double-triangle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-top: 17px dotted #444;
+    border-right: 17px dotted #666;
+    border-bottom: 17px dotted #888;
+    border-left: 17px dotted #aaa;
+    border-radius: 50%;
+    /*border-style: solid;*/
+    /*border-color: #222 transparent;*/
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+
+#app {
+    position: relative;
+}
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #aaa;
+    opacity: 0.8;
+}
+
+.loading-screen > .center {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+}
+
+.m-a {
+    margin: auto;
+}
+
+.loading-screen > .center > .loading-text {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrap{
+    width: 300px;
+    margin: 0;
+    position: relative;
+    /*height: 20px;*/
+    /*display: block;*/
+}
+
+.wrap > p {
+    margin: 0;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.bar{
+    width: 30px;
+    height: 30px;
+    background-color: #ee5257;
+    border-radius: 30px;
+    animation: widing 3s cubic-bezier(1, 0, 0, 1) alternate infinite running;
+}
+
+@keyframes widing {
+    25% {
+        background-color: #ee8252;
+        width: 300px;
+    }
+    50% {
+        width: 30px;
+        background-color: #ee5257;
+        margin-left: auto;
+    }
+    75% {
+        background-color: #ee8252;
+        width: 300px;
+    }
+    100% {
+        width: 30px;
+        background-color: #ee5257;
+        margin: 0;
+    }
+}
