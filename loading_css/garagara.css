@@ -13,7 +13,12 @@ body {
 }
 
 .shutter {
-    background: repeating-linear-gradient(rgba(89, 84, 83, 0.52) 0, rgba(89, 84, 83, 0.5) 30px, rgba(24, 20, 19, 0.76) 30px, rgba(24, 20, 19, 0.5) 40px);
+    background: repeating-linear-gradient(
+            #D1CDCA,
+            #D1CDCA 30px,
+            #9C9287 30px,
+            #9C9287 33px
+    );
 }
 .center {
     position: absolute;
