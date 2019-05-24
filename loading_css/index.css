@@ -33,9 +33,18 @@
 }
 
 
+.squire-wrap {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+
 .squire {
-    width: 50px;
-    height: 50px;
     background-color: #ee8252;
 }
 
@@ -54,8 +63,8 @@
         background-color: #eee55e;
         border-radius: 50% 43% 40% 46%;
         transform: rotate(0);
-        width: 60px;
-        height: 80px;
+        width: 300px;
+        height: 400px;
     }
 
     25% {
@@ -65,8 +74,8 @@
     50% {
         background-color: #ee403d;
         border-radius: 40% 70% 45% 60%;
-        width: 70px;
-        height: 70px;
+        width: 350px;
+        height: 350px;
     }
 
     75% {
@@ -77,8 +86,8 @@
         background-color: #ee88ad;
         border-radius: 90% 50% 80% 70%;
         transform: rotate(270deg);
-        width: 90px;
-        height: 90px;
+        width: 450px;
+        height: 450px;
     }
 }
 
@@ -165,32 +174,35 @@
     margin: auto;
 }
 
-.loading-screen > .center > .loading-text {
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    color: #fff;
-}
-
-.wrap{
-    width: 800px;
-    margin: 0;
-    position: relative;
-    /*height: 20px;*/
-    /*display: block;*/
-}
-
-.wrap > p {
+.loading-text {
     font-size: 2em;
     margin: 0;
     color: #fff;
     position: absolute;
     text-align: center;
-    line-height: 100px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.loading-screen > .squire-wrap > .text-height400{
+    line-height: 400px;
+}
+
+.bar-wrap{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 800px;
+    height: 100px;
+}
+
+.loading-screen > .bar-wrap > .text-height100 {
+    line-height: 100px;
 }
 
 .bar{

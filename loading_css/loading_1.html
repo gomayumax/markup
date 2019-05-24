@@ -10,16 +10,16 @@
 <body>
 <div id="app">
   <div class="loading-screen" v-show="loading">
-    <div class="center">
-      <div v-show="circle">
-        <div class="squire change-color m-a"></div>
-        <p class="loading-text">now loading...</p>
-      </div>
-      <div class="wrap" v-show="bar">
-        <div class="bar"></div>
-        <p>now loading...</p>
-      </div>
+    <div v-show="bar" class="bar-wrap">
+      <div class="bar"></div>
+      <p class="loading-text text-height100">now loading...</p>
     </div>
+
+    <div v-show="squire" class="squire-wrap">
+        <div class="squire change-color m-a"></div>
+        <p class="loading-text text-height400">now loading...</p>
+    </div>
+
   </div>
   <div v-show="!loading">
     <img src="https://pbs.twimg.com/profile_images/971311017555890177/mwP27ZmR.jpg">
@@ -34,7 +34,7 @@
       message: 'Hello Vue!',
       results: [],
       loading: true,
-      circle: false,
+      squire: false,
       bar: true,
     },
     created: function () {
