@@ -157,7 +157,7 @@
     top: 0px;
     bottom: 0px;
     margin: auto;
-    width: 200px;
+    width: 800px;
     height: 100px;
 }
 
@@ -173,7 +173,7 @@
 }
 
 .wrap{
-    width: 300px;
+    width: 800px;
     margin: 0;
     position: relative;
     /*height: 20px;*/
@@ -181,11 +181,12 @@
 }
 
 .wrap > p {
+    font-size: 2em;
     margin: 0;
     color: #fff;
     position: absolute;
     text-align: center;
-    line-height: 30px;
+    line-height: 100px;
     top: 0;
     left: 0;
     right: 0;
@@ -193,29 +194,29 @@
 }
 
 .bar{
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     background-color: #ee5257;
-    border-radius: 30px;
+    border-radius: 100px;
     animation: widing 3s cubic-bezier(1, 0, 0, 1) alternate infinite running;
 }
 
 @keyframes widing {
     25% {
         background-color: #ee8252;
-        width: 300px;
+        width: 800px;
     }
     50% {
-        width: 30px;
+        width: 100px;
         background-color: #ee5257;
         margin-left: auto;
     }
     75% {
         background-color: #ee8252;
-        width: 300px;
+        width: 800px;
     }
     100% {
-        width: 30px;
+        width: 100px;
         background-color: #ee5257;
         margin: 0;
     }
